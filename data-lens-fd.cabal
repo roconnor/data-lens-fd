@@ -1,13 +1,13 @@
 name:          data-lens-fd
 category:      Control, Comonads
-version:       2.0.1
+version:       2.0.2
 license:       BSD3
 cabal-version: >= 1.6
 license-file:  LICENSE
 author:        Edward A. Kmett
-maintainer:    Edward A. Kmett <ekmett@gmail.com>
+maintainer:    Russell O'Connor <roconnor@theorem.ca>
 stability:     provisional
-homepage:      http://github.com/ekmett/data-lens-fd/
+homepage:      http://github.com/roconnor/data-lens-fd/
 copyright:     Copyright (C) 2011 Edward A. Kmett
 synopsis:      Lenses
 description:   Lenses
@@ -15,7 +15,7 @@ build-type:    Simple
 
 source-repository head
   type: git
-  location: git://github.com/ekmett/data-lens-fd.git
+  location: git://github.com/roconnor/data-lens-fd.git
 
 flag DeriveDataTypeable
   manual: False
@@ -26,7 +26,7 @@ library
     base >= 4 && < 5,
     mtl >= 2.0.1.0 && <= 2.2,
     transformers >= 0.2 && < 0.4,
-    data-lens >= 2.0 && < 2.1,
+    data-lens >= 2.0 && < 2.11,
     comonad-transformers >= 2.0 && < 2.2
 
   exposed-modules:
