@@ -1,6 +1,6 @@
 name:          data-lens-fd
 category:      Control, Comonads
-version:       2.0.2
+version:       2.0.3
 license:       BSD3
 cabal-version: >= 1.6
 license-file:  LICENSE
@@ -27,7 +27,7 @@ library
     mtl >= 2.0.1.0 && <= 2.2,
     transformers >= 0.2 && < 0.4,
     data-lens >= 2.0 && < 2.11,
-    comonad-transformers >= 2.0 && < 2.2
+    comonad-transformers >= 2.0 && < 3.1
 
   exposed-modules:
     Data.Lens
