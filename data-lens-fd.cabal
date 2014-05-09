@@ -1,6 +1,6 @@
 name:          data-lens-fd
 category:      Control, Comonads
-version:       2.0.4
+version:       2.0.5
 license:       BSD3
 cabal-version: >= 1.6
 license-file:  LICENSE
@@ -24,10 +24,10 @@ flag DeriveDataTypeable
 library
   build-depends:
     base >= 4 && < 5,
-    mtl >= 2.0.1.0 && <= 2.2,
-    transformers >= 0.2 && < 0.4,
+    mtl >= 2.0.1.0 && <= 2.3,
+    transformers >= 0.2 && < 0.5,
     data-lens >= 2.10.4 && < 2.11,
-    comonad >= 4.0 && < 4.1
+    comonad >= 4.0 && < 4.3
 
   exposed-modules:
     Data.Lens
