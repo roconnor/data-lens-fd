@@ -1,12 +1,13 @@
 { pkgs ? import <nixpkgs> {}
 , hp ? pkgs.haskellPackages
-, src ? ./.
-, dataLens ? import ../data-lens {inherit pkgs hp;}
+, data-lens ? hp.data-lens
 }:
 
-hp.cabal.mkDerivation (self: {
+hp.callPackage ({mkDerivation, comonad, mtl, transformers, data-lens}:
+ mkDerivation {
   pname = "data-lens-fd";
-  version = "2.0.5";
-  inherit src;
-  buildDepends = [ hp.comonad hp.mtl hp.transformers dataLens ];
-})
+  version = "2.0.6";
+  src = pkgs.lib.sourceFilesBySuffices ./. [".hs" ".cabal" "LICENSE"];
+  buildDepends = [ comonad mtl transformers data-lens ];
+  license = pkgs.lib.licenses.bsd3;
+}) { inherit data-lens; }
